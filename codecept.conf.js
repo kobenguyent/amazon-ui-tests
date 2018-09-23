@@ -2,38 +2,30 @@ require('import-export');
 require('events').EventEmitter.prototype._maxListeners = 100;
 
 exports.config = {
-  "tests": "./tests/**/*.js",
-  "timeout": 10000,
-  "output": "./output",
-  "helpers": {
-    "WebDriverIO": {
+  tests: "./tests/**/*.js",
+  timeout: 10000,
+  output: "./output",
+  helpers: {
+    WebDriverIO: {
       url: 'https://www.amazon.de',
-      "browser": "chrome",
-      "desiredCapabilities": {
-        "chromeOptions": {
-          "args": [ "--headless", "--disable-gpu", "--window-size=800,600" ]
+      browser: "chrome",
+      desiredCapabilities: {
+        chromeOptions: {
+          args: [ "--headless", "--disable-gpu", "--window-size=800,600" ]
         }
       },
-      "keepCookies": true,
-      keepBrowserState: true,
-      restart: false,
-      "windowSize": "1440x700",
-      "waitForNavigation": ["networkidle2","domcontentloaded"],
+      windowSize: "1440x700",
+      waitForNavigation: ["networkidle2","domcontentloaded"],
     }
   },
-  "bootstrap": false,
-  "mocha": {
-    "reporterOptions": {
-        "reportDir": "output"
+  bootstrap: false,
+  name: "amazon-ui-tests",
+  multiple: {
+    parallel: {
+      chunks: 2
     }
   },
-  "name": "amazon-ui-tests",
-  "multiple": {
-    "parallel": {
-      "chunks": 2
-    }
-  },
-  "include": {
+  include: {
     homePage: './pages/HomePage.js',
     resultPage: './pages/ResultPage.js',
     productDetailsPage: './pages/ProductDetailsPage.js',

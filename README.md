@@ -25,7 +25,15 @@ $ cd amazon-ui-tests
 $ npm install -d
 ```
 
-### How to trigger API test
+### How to trigger UI test
+
+
+This is using WebDriverIO helper which wraps webdriverio library to manipulate browser, hence Selenium WebDriver needs to be called
+
+```sh
+$ webdriver-manager update
+$ webdriver start
+```
 
 To run all e2e tests just simply type
 
