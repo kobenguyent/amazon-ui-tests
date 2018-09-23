@@ -24,11 +24,9 @@
     "selenium-webdriver": "^4.0.0-alpha.1"
   },
   "devDependencies": {
-    "chance": "^1.0.16",
     "eslint": "^5.5.0",
     "eslint-plugin-codeceptjs": "^0.4.0",
     "husky": "^0.14.3",
-    "unirest": "^0.5.1",
     "wdio-selenium-standalone-service": "0.0.10",
     "webdriverio": "^4.13.2"
   }
