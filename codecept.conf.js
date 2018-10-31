@@ -1,5 +1,6 @@
 require('import-export');
 require('events').EventEmitter.prototype._maxListeners = 100;
+const selenium = require('selenium-standalone');
 
 exports.config = {
   tests: "./tests/**/*.js",
@@ -18,7 +19,24 @@ exports.config = {
       waitForNavigation: ["networkidle2","domcontentloaded"],
     }
   },
-  bootstrap: false,
+    bootstrap: (done) => {
+    selenium.start((err, child) => {
+      if (err) {
+        throw err;
+      }
+
+      selenium.__child = child;
+      done();
+    });
+  },
+  teardown: (done) => {
+    setTimeout(() => {
+      try {
+        if (selenium.__child) selenium.__child.kill();
+      } catch (e) {}
+    }, 3000);
+    done();
+  }
   name: "amazon-ui-tests",
   multiple: {
     parallel: {
