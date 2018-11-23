@@ -19,12 +19,12 @@ jobs:
             name: Install selenium
             command: ./node_modules/webdriver-manager/bin/webdriver-manager start
             background: true
-      - run:
+        - run:
             name: Run e2e tests
             command: npm run start
 
 workflows:
     version: 2.1
-        test:
-            jobs:
-                - test
+    test:
+        jobs:
+            - test
