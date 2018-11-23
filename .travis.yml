@@ -1,0 +1,14 @@
+language: node_js
+node_js:
+- 8
+- 10
+sudo: required
+services:
+- docker
+before_install:
+- docker pull peternguyentr/node-java-puppeteer:latest
+before_script:
+- docker run -d --net=host --shm-size=2g
+script:
+- npm install
+- npm run test
