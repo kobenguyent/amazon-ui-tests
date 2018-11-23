@@ -10,6 +10,7 @@ exports.config = {
     WebDriverIO: {
       url: 'https://www.amazon.de',
       browser: "chrome",
+      host: process.env.HOST,
       desiredCapabilities: {
         chromeOptions: {
           args: [ "--headless", "--disable-gpu", "--window-size=800,600" ]
