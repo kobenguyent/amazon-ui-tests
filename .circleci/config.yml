@@ -17,9 +17,6 @@ jobs:
                 name: Install selenium
                 command: ./node_modules/.bin/selenium-standalone install
             - run:
-                name: start selenium
-                command: ./node_modules/.bin/selenium-standalone start
-            - run:
                 name: Run e2e tests
                 command: npm run start
 
