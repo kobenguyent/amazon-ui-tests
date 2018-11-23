@@ -12,10 +12,10 @@ jobs:
       - checkout
       - run:
           name: Install libs
-          command: yarn install
+          command: npm install
       - run:
           name: Run e2e tests
-          command: yarn start
+          command: npm run start
 
 workflows:
   version: 2.1
