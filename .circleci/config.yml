@@ -8,7 +8,7 @@ version: 2.1
 jobs:      
     test:
         docker:
-            - image: finanzcheck/docker-node-java:latest
+            - image: esarbanis/docker-node-java:latest
         steps:
             - checkout
             - run:
