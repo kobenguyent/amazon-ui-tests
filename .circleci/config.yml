@@ -9,7 +9,7 @@ executors:
       - image: circleci/node:9.10
 
 jobs:
-  e2e-tests:
+  tests:
     executor: my-executor
 
     steps:
