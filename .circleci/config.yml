@@ -5,9 +5,9 @@
 version: 2.1
 
 jobs:
-  test:
-    docker:
-        - image: peternguyentr/node-java-puppeteer:latest
+    test:
+        docker:
+            - image: peternguyentr/node-java-puppeteer:latest
     steps:
         - checkout
         - run:
