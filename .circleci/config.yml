@@ -33,6 +33,5 @@ workflows:
   version: 2.1
   test:
     jobs:
-      - test:
-            requires:
-                - prepare
+    - prepare
+      - test
