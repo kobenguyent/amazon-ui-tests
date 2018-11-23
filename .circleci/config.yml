@@ -9,12 +9,12 @@ executors:
       - image: circleci/node:9.10
 
 jobs:
-  build:
-    executor: my-executor
+  - checkout:
+      executor: my-executor
 
-    working_directory: ~/amazon-ui-tests
+      working_directory: ~/amazon-ui-tests
 
-    steps:
-      - run: yarn install 
-      # run tests!
-      - run: yarn start
+      steps:
+        - run: yarn install 
+        # run tests!
+        - run: yarn start
