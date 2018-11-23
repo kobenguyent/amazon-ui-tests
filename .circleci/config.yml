@@ -3,18 +3,16 @@
 # Check https://circleci.com/docs/2.0/language-javascript/ for more details
 #
 version: 2.1
-executors:
-  my-executor:
-    docker:
-      - image: circleci/node:9.10
 
 jobs:
-  - checkout:
-      executor: my-executor
+  build:
+    docker:
+      - image: circleci/node:9.10
+  
+  working_directory: ~/amazon-ui-tests
 
-      working_directory: ~/amazon-ui-tests
-
-      steps:
-        - run: yarn install 
-        # run tests!
-        - run: yarn start
+  steps:
+    - checkout
+    - run: yarn install 
+    # run tests!
+    - run: yarn start
