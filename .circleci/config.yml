@@ -8,7 +8,7 @@ version: 2.1
 jobs:      
     test:
         docker:
-            - image: peternguyentr/node-java-puppeteer:latest
+            - image: loyaltyone/docker-alpine-java-node:latest
         steps:
             - checkout
             - run:

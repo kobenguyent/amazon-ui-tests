@@ -26,6 +26,7 @@ exports.config = {
       }
 
       selenium.__child = child;
+      console.log(selenium);
       done();
     });
   },
