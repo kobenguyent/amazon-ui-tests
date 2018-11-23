@@ -19,7 +19,7 @@ exports.config = {
       waitForNavigation: ["networkidle2","domcontentloaded"],
     }
   },
-    bootstrap: (done) => {
+  bootstrap: (done) => {
     selenium.start((err, child) => {
       if (err) {
         throw err;
@@ -36,7 +36,7 @@ exports.config = {
       } catch (e) {}
     }, 3000);
     done();
-  }
+  },
   name: "amazon-ui-tests",
   multiple: {
     parallel: {
