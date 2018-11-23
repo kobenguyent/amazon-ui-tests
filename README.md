@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/PeterNgTr/amazon-ui-tests.svg?branch=master)](https://travis-ci.org/PeterNgTr/amazon-ui-tests)
+
 # Introduction
 
 Basically, this is used for e2e tests.
