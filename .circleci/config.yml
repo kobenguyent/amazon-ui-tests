@@ -12,7 +12,7 @@ jobs:
   build:
     executor: my-executor
 
-    working_directory: $CIRCLE_WORKING_DIRECTORY/amazon-ui-tests
+    working_directory: ~/amazon-ui-tests
 
     steps:
       - run: yarn install 
