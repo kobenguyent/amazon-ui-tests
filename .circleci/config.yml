@@ -6,13 +6,13 @@ version: 2.1
 
 jobs:
   build:
-    docker:
-      - image: circleci/node:9.10
+      docker:
+        - image: circleci/node:9.10
   
-  working_directory: ~/amazon-ui-tests
+      working_directory: ~/amazon-ui-tests
 
-  steps:
-    - checkout
-    - run: yarn install 
-    # run tests!
-    - run: yarn start
+      steps:
+        - checkout
+        - run: yarn install 
+        # run tests!
+        - run: yarn start
