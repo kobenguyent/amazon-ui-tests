@@ -5,7 +5,7 @@ sudo: required
 services:
 - docker
 before_install:
-- docker pull codeception/codeceptjs:latest
+- docker pull peternguyentr/node-puppeteer:latest
 script:
 - npm install
 - npm install selenium-server
