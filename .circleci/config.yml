@@ -5,14 +5,14 @@
 version: 2.1
 
 jobs:
-  build:
-      docker:
+  test:
+    docker:
         - image: circleci/node:9.10
-  
-      working_directory: ~/amazon-ui-tests
-
-      steps:
-        - checkout
-        - run: yarn install 
-        # run tests!
-        - run: yarn start
+    steps:
+      - checkout
+      - run:
+          name: Install libs
+          command: npm i
+      - run:
+          name: Run e2e tests
+          command: npm run start
