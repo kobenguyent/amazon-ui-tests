@@ -21,13 +21,13 @@
     "import-export": "^1.0.1",
     "mocha": "^5.2.0",
     "mochawesome": "^3.0.3",
-    "selenium-webdriver": "^4.0.0-alpha.1",
-    "selenium-standalone": "^6.15.3"
+    "selenium-webdriver": "^4.0.0-alpha.1"
   },
   "devDependencies": {
     "eslint": "^5.5.0",
     "eslint-plugin-codeceptjs": "^0.4.0",
     "husky": "^0.14.3",
+    "selenium-standalone": "^6.15.4",
     "wdio-selenium-standalone-service": "0.0.10",
     "webdriverio": "^4.13.2"
   }
