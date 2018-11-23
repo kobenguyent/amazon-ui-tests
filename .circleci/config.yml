@@ -1,30 +1,32 @@
+
 # Javascript Node CircleCI 2.0 configuration file
 #
 # Check https://circleci.com/docs/2.0/language-javascript/ for more details
 #
 version: 2.1
-jobs:
+
+jobs:      
     test:
         docker:
             - image: peternguyentr/node-java-puppeteer:latest
-    steps:
-        - checkout
-        - run:
-            name: Install libs
-            command: npm install
-        - run:
-            name: Install selenium
-            command: ./node_modules/webdriver-manager/bin/webdriver-manager update
-        - run:
-            name: Install selenium
-            command: ./node_modules/webdriver-manager/bin/webdriver-manager start
-            background: true
-        - run:
-            name: Run e2e tests
-            command: npm run start
+        steps:
+            - checkout
+            - run:
+                name: Install libs
+                command: npm install
+            - run:
+                name: Install selenium
+                command: ./node_modules/.bin/selenium-standalone install
+            - run:
+                name: start selenium
+                command: ./node_modules/.bin/selenium-standalone start
+                background: true
+            - run:
+                name: Run e2e tests
+                command: npm run start
 
 workflows:
-    version: 2.1
-    test:
-        jobs:
-            - test
+  version: 2.1
+  test:
+    jobs:
+        - test
