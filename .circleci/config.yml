@@ -17,7 +17,7 @@ jobs:
     working_directory: ~/repo
 
     steps:
-      - e2e-tests
+      - tests
 
       # Download and cache dependencies
       - restore_cache:
