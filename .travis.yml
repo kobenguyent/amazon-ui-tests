@@ -8,4 +8,6 @@ before_install:
 - docker pull peternguyentr/node-java-puppeteer:latest
 script:
 - npm install
+- npm install selenium-server
+- ./node_modules/.bin/selenium-standalone install
 - npm run start
