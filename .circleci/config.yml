@@ -16,3 +16,9 @@ jobs:
       - run:
           name: Run e2e tests
           command: npm run start
+
+workflows:
+  version: 2.1
+  test:
+    jobs:
+      - test
