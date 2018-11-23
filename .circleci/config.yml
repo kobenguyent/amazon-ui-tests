@@ -4,28 +4,28 @@
 #
 version: 2.1
 
-jobs:      
-    test:
-        docker:
-            - image: peternguyentr/node-java-puppeteer:latest
-        steps:
-            - checkout
-            - run:
-                name: Install libs
-                command: npm install
-            - run:
-                name: Install selenium
-                command: ./node_modules/.bin/selenium-standalone install
-            - run:
-                name: start selenium
-                command: ./node_modules/.bin/selenium-standalone start
-                background: true
-            - run:
-                name: Run e2e tests
-                command: npm run start
+jobs:
+  test:
+    docker:
+        - image: peternguyentr/node-java-puppeteer:latest
+    steps:
+        - checkout
+        - run:
+            name: Install libs
+            command: npm install
+        - run:
+            name: Install selenium
+            command: ./node_modules/webdriver-manager/bin/webdriver-manager update
+        - run:
+            name: Install selenium
+            command: ./node_modules/webdriver-manager/bin/webdriver-manager start
+            background: true
+      - run:
+            name: Run e2e tests
+            command: npm run start
 
 workflows:
   version: 2.1
   test:
     jobs:
-        - test
+      - test
