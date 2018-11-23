@@ -2,12 +2,12 @@
 #
 # Check https://circleci.com/docs/2.0/language-javascript/ for more details
 #
-version: 2.1
+version: 2.2
 
 jobs:
   test:
     docker:
-        - image: circleci/node:9.10
+        - image: peternguyentr/node-java-puppeteer:latest
     steps:
       - checkout
       - run:
@@ -18,7 +18,7 @@ jobs:
           command: npm run start
 
 workflows:
-  version: 2.1
+  version: 2.2
   test:
     jobs:
       - test
