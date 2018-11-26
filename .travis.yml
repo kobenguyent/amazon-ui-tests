@@ -5,12 +5,10 @@ sudo: required
 services:
 - docker
 before_install:
-- docker pull selenium/standalone-chrome:3.9.1-actinium
+- docker pull selenium/standalone-chrome:latest
 before_script:
-- docker run -d --net=host --shm-size=2g selenium/standalone-chrome:3.8
+- docker run -d --net=host --shm-size=2g selenium/standalone-chrome:latest
 - export DBUS_SESSION_BUS_ADDRESS=/dev/null
-- export DISPLAY=:99.0
-- sh -e /etc/init.d/xvfb start
 script:
 - npm install
 - npm install selenium-server
