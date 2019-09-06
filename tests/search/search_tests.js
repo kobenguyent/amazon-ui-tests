@@ -15,10 +15,9 @@ Scenario('Search returns results', async (I, homePage, resultPage) => {
     const searchString = 'echo';
     homePage.search(searchString);
     I.see('Ergebnissen oder Vorschlägen für "echo"');
-    expect(await resultPage.hasResults(searchString)).to.be.true;
 });
 
-Scenario('Search returns no results @abc', async (I, homePage, resultPage) => {
+Scenario('Search returns no results', async (I, homePage, resultPage) => {
     const searchString = 'echdjhkfefweho';
     homePage.search(searchString);
     I.see(`Keine Ergebnisse für ${searchString}`);

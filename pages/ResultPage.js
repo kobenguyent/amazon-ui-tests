@@ -2,8 +2,8 @@ const I = actor();
 
 export default resultPage = {
     resultBar: '#s-result-info-bar-content',
-    productName: 'h2',
-    noResult: 'h1[id="noResultsTitle"]',
+    productName: locate('h2').at(1),
+    noResult: '#noResultsTitle',
 
     async hasResults(searchString) {
         const results = await I.grabTextFrom(this.productName);

@@ -11,14 +11,13 @@ exports.config = {
       browser: 'chrome',
       desiredCapabilities: {
         chromeOptions: {
-          args: [ '--disable-gpu', '--window-size=800,600' ]
+          args: ['--headless', '--disable-gpu', '--window-size=1440,700' ]
         }
       },
-      windowSize: '1440x700',
-      waitForNavigation: ['networkidle2','domcontentloaded'],
+      windowSize: '1440x700'
     }
   },
-  bootstrap: (done) => {
+  bootstrapAll: (done) => {
     selenium.start((err, child) => {
       if (err) {
         throw err;
@@ -28,7 +27,7 @@ exports.config = {
       done();
     });
   },
-  teardown: (done) => {
+  teardownAll: (done) => {
     setTimeout(() => {
       try {
         if (selenium.__child) selenium.__child.kill();

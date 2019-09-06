@@ -1,9 +1,8 @@
 import navTools from './NavTools';
-import popup from './Popup';
 const I = actor();
 
 export default productDetailsPage = {
-    addToCartButton: 'input[id="add-to-cart-button"]',
+    addToCartButton: '#add-to-cart-button',
 
     async addToCart() {
         I.click(this.addToCartButton);
