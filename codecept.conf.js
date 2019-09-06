@@ -1,22 +1,21 @@
 require('import-export');
-require('events').EventEmitter.prototype._maxListeners = 100;
 const selenium = require('selenium-standalone');
 
 exports.config = {
-  tests: "./tests/**/*.js",
+  tests: './tests/**/*.js',
   timeout: 10000,
-  output: "./output",
+  output: './output',
   helpers: {
-    WebDriverIO: {
+    WebDriver: {
       url: 'https://www.amazon.de',
-      browser: "chrome",
+      browser: 'chrome',
       desiredCapabilities: {
         chromeOptions: {
-          args: [ "--headless", "--disable-gpu", "--window-size=800,600" ]
+          args: [ '--disable-gpu', '--window-size=800,600' ]
         }
       },
-      windowSize: "1440x700",
-      waitForNavigation: ["networkidle2","domcontentloaded"],
+      windowSize: '1440x700',
+      waitForNavigation: ['networkidle2','domcontentloaded'],
     }
   },
   bootstrap: (done) => {
@@ -37,7 +36,7 @@ exports.config = {
     }, 3000);
     done();
   },
-  name: "amazon-ui-tests",
+  name: 'amazon-ui-tests',
   multiple: {
     parallel: {
       chunks: 2

@@ -17,7 +17,7 @@
   "dependencies": {
     "allure-commandline": "^2.7.0",
     "chai": "^4.1.2",
-    "codeceptjs": "1.4.1",
+    "codeceptjs": "2.3.0",
     "import-export": "^1.0.1",
     "mocha": "^5.2.0",
     "mochawesome": "^3.0.3",
@@ -30,6 +30,6 @@
     "husky": "^0.14.3",
     "selenium-standalone": "^6.15.4",
     "wdio-selenium-standalone-service": "0.0.10",
-    "webdriverio": "^4.13.2"
+    "webdriverio": "5.12.5"
   }
 }

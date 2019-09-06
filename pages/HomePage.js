@@ -8,6 +8,6 @@ export default homePage = {
     search(searchString = 'amazon echo') {
         I.fillField(this.searchTextbox, searchString);
         I.click(this.searchButton);
-    },
+    }
   };
   

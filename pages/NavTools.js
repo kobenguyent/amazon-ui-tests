@@ -1,4 +1,3 @@
 export default navTools = {
-    cartCount: 'span[id="nav-cart-count"]',
-
+    cartCount: 'span[id="nav-cart-count"]'
 }
