@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/PeterNgTr/amazon-ui-tests.svg?branch=master)](https://travis-ci.org/PeterNgTr/amazon-ui-tests)
+[![Build Status](https://travis-ci.org/PeterNgTr/amazon-ui-tests.svg?branch=master)](https://travis-ci.org/PeterNgTr/amazon-ui-tests) [![Greenkeeper badge](https://badges.greenkeeper.io/PeterNgTr/amazon-ui-tests.svg)](https://greenkeeper.io/)
 
 # Introduction
 
