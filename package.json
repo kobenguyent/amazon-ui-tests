@@ -17,19 +17,19 @@
   "dependencies": {
     "allure-commandline": "^2.7.0",
     "chai": "^4.1.2",
-    "codeceptjs": "2.3.0",
+    "codeceptjs": "2.3.6",
     "import-export": "^1.0.1",
-    "mocha": "^5.2.0",
-    "mochawesome": "^3.0.3",
+    "mocha": "^6.2.2",
+    "mochawesome": "^4.1.0",
     "selenium-webdriver": "^4.0.0-alpha.1",
     "webdriver-manager": "^12.1.0"
   },
   "devDependencies": {
-    "eslint": "^5.5.0",
-    "eslint-plugin-codeceptjs": "^0.4.0",
-    "husky": "^0.14.3",
+    "eslint": "^6.7.1",
+    "eslint-plugin-codeceptjs": "^1.2.0",
+    "husky": "^3.1.0",
     "selenium-standalone": "^6.15.4",
-    "wdio-selenium-standalone-service": "0.0.10",
-    "webdriverio": "5.12.5"
+    "wdio-selenium-standalone-service": "0.0.12",
+    "webdriverio": "5.16.9"
   }
 }
